@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Header from '../components/Header';
-import TasksList, { Task } from '../components/TasksList';
-import TodoInput from '../components/TodoInput';
+import { Header } from '../components/Header';
+import { Task, TasksList } from '../components/TasksList';
+import { TodoInput } from '../components/TodoInput';
 
-const Home: React.FC<any> = () => {
+export const Home = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const handleAddTask = (newTaskTitle: string) => {
@@ -59,5 +59,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBEBEB'
   }
 })
-
-export default Home

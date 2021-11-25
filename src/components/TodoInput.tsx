@@ -6,10 +6,10 @@ interface TodoInputProps {
   addTask: (task: string) => void;
 }
 
-const TodoInput: React.FC<any> = ({ addTask }: TodoInputProps) => {
+export const TodoInput = ({ addTask }: TodoInputProps) => {
   const [task, setTask] = useState('');
 
-  const handleAddNewTask = () => {
+  function handleAddNewTask() {
     if (task) {
       addTask(task)
     }
@@ -27,7 +27,7 @@ const TodoInput: React.FC<any> = ({ addTask }: TodoInputProps) => {
         selectionColor="#666666"
         value={task}
         onChangeText={(e) => setTask(e)}
-        onSubmitEditing={() => handleAddNewTask()}
+        onSubmitEditing={handleAddNewTask}
       />
       <TouchableOpacity
         testID="add-new-task-button"
@@ -71,5 +71,3 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 5,
   },
 });
-
-export default TodoInput

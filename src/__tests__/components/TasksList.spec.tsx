@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 
-import TasksList from '../../components/TasksList';
+import { TasksList } from '../../components/TasksList';
 
 let tasks: {
   id: number;

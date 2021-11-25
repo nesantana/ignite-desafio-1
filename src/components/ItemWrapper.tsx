@@ -7,7 +7,7 @@ interface ItemWrapperProps {
   children: ReactNode;
 }
 
-const ItemWrapper: React.FC<any> = ({ index, children }: ItemWrapperProps) => {
+export const ItemWrapper = ({ index, children }: ItemWrapperProps) => {
   if (index % 2 === 0)
     return (
       <LinearGradient
@@ -28,5 +28,3 @@ const ItemWrapper: React.FC<any> = ({ index, children }: ItemWrapperProps) => {
     </View>
   )
 }
-
-export default ItemWrapper

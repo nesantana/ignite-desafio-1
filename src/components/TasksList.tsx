@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, Image, TouchableOpacity, View, Text, StyleSheet, FlatListProps } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import ItemWrapper from './ItemWrapper';
+import { ItemWrapper } from './ItemWrapper';
 
 import trashIcon from '../assets/icons/trash/trash.png'
 
@@ -18,7 +18,7 @@ interface TasksListProps {
   removeTask: (id: number) => void;
 }
 
-const TasksList: React.FC<any> = ({ tasks, toggleTaskDone, removeTask }: TasksListProps) => {
+export const TasksList = ({ tasks, toggleTaskDone, removeTask }: TasksListProps) => {
   return (
     <FlatList
       data={tasks}
@@ -110,5 +110,3 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter-Medium'
   }
 })
-
-export default TasksList

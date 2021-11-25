@@ -8,7 +8,7 @@ interface HeaderProps {
   tasksCounter: number;
 }
 
-const Header: React.FC<any> = ({ tasksCounter }: HeaderProps) => {
+export const Header = ({ tasksCounter }: HeaderProps) => {
   const tasksCounterText = tasksCounter === 1 ? 'tarefa' : 'tarefas'
   
   return (
@@ -48,5 +48,3 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter-Bold',
   }
 });
-
-export default Header
